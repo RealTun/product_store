@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Admin Area </a>
+        <a class="navbar-brand" href="{{route('admin.home.index')}}">Admin Area </a>
     </div>
     <!-- /.navbar-header -->
 
@@ -46,7 +46,7 @@
                     <!-- /input-group -->
                 </li>
                 <li>
-                    <a href=""><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    <a href="{{route('admin.home.index')}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Product<span class="fa arrow"></span></a>

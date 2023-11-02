@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +28,7 @@ Route::patch('update-cart', [CartController::class, 'update'])->name('update_car
 Route::delete('remove-from-cart', [CartController::class, 'remove'])->name('remove_from_cart');
 
 Route::prefix('admin')->group(function () {
-    //Route::get('dashboard', [HomeController::class, 'index'])->name('admin.home.index');
+    Route::get('/home', [HomeController::class, 'index'])->name('admin.home.index');
 
     Route::prefix('products')->group(function () {
         Route::get('/', [ProductController::class, 'index'])->name('admin.products.index');
